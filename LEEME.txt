@@ -1,0 +1,14 @@
+ZONA DE JUEGOS — ESCUELA TÉCNICA SANDÚ 2
+
+1. Extraé todo el ZIP en una carpeta.
+2. Abrí index.html (el de la carpeta principal) en Chrome, Firefox o Edge.
+3. También podés abrir directamente el index.html de cada juego.
+
+No requiere instalación, servidor ni cuentas. Los archivos HTML, CSS y JavaScript se pueden editar en Visual Studio Code.
+
+Atelier Vibe: fotografías públicas enlazadas de Wikimedia Commons con créditos dentro de la página. Son referencias visuales, no fotografías de productos en venta. Si no se pueden cargar, aparecen dibujos SVG incluidos. La conexión a Internet es necesaria solo para las fotografías. No hay compras reales.
+Mi Granja: cuidado diario de los cuatro animales, tienda y guardado local. Se inicia una nueva partida respecto al archivo original.
+Flappy Sandú: espacio, flecha arriba o botón Impulsar. P para pausa. Usa el escudo proporcionado.
+Maze Runner: flechas, WASD, botones o gestos sobre el laberinto. Recogé las llaves antes de entrar al portal. Los niveles se generan automáticamente.
+
+El guardado de partidas y récords depende de que el navegador permita almacenamiento local. No se comparte entre dispositivos.

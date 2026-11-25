@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Atelier Vibe — Tienda de ropa</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="app-root"><a class="backlink" href="../index.html">← Menú de juegos</a>
+<header><nav class="nav"><div class="brand"><span class="brand-dot"></span> atelier vibe</div><div class="nav-links"><button onclick="scrollToId('shop')">Tienda</button><button onclick="scrollToId('game')">Jugar</button><button onclick="scrollToId('about')">Sobre la tienda</button></div><button class="icon-btn cart-btn" onclick="toggleCart()" aria-label="Abrir carrito">🛍️ Carrito<span class="badge" id="cartBadge">0</span></button></nav></header>
+<main>
+<section class="hero">
+  <div class="hero-copy"><span class="eyebrow">Colección 2026 · Sin registro</span><h1>Vestite como vos.</h1><p>Descubrí prendas, armá tu look y sumá puntos en el desafío de estilo. Una tienda de ropa pensada para explorar jugando.</p><button class="cta" onclick="scrollToId('shop')">Explorar colección →</button></div>
+  <div class="hero-art"><div class="look-board"><div class="mannequin"><div class="head"></div><div class="body"></div><div class="skirt"></div><div class="leg l"></div><div class="leg r"></div></div></div><div class="mini-copy"><span>Look destacado</span><strong>Colección de temporada</strong></div></div>
+</section>
+
+<section id="shop">
+<div class="section-head"><div><h2>Elegí tu estilo</h2><p>Filtrá por categoría y agregá tus favoritos al carrito.</p></div><div class="controls"><button class="chip active" data-filter="all" onclick="filterProducts('all',this)">Todo</button><button class="chip" data-filter="tops" onclick="filterProducts('tops',this)">Tops</button><button class="chip" data-filter="bottoms" onclick="filterProducts('bottoms',this)">Prendas de abajo</button><button class="chip" data-filter="shoes" onclick="filterProducts('shoes',this)">Calzado</button><button class="chip" data-filter="favorites" onclick="filterProducts('favorites',this)">♥ Favoritos</button></div></div>
+<div class="grid" id="productGrid"></div>
+</section>
+
+<section id="game" class="game">
+<div class="game-panel"><span class="eyebrow">Mini juego</span><h3>Desafío: armá el outfit</h3><p>Elegí una prenda de arriba, una de abajo y un calzado. Tu objetivo es llegar a <b>25 puntos</b> eligiendo prendas que se ajusten a la ocasión. Cada desafío tiene una combinación ideal.</p>
+<div class="occasion"><strong id="challengeName"></strong><p id="challengeDesc"></p><button class="chip" onclick="nextChallenge()">Cambiar desafío ↻</button></div><div class="meters"><span class="meter">🎯 Meta: 25 puntos</span><span class="meter">💡 Sin cuenta</span><span class="meter">🏆 Récord: <b id="record">0 pts</b></span></div>
+<div class="challenge" id="gameOptions"></div></div>
+<div class="game-panel"><span class="eyebrow">Tu look</span><div class="score" id="score">0 pts</div><div id="outfitText" class="result">Elegí tres prendas para empezar.</div><div class="outfit-preview" id="outfitPreview"></div></div>
+</section>
+
+<section id="about" class="game"><div class="game-panel"><span class="eyebrow">Atelier Vibe</span><h3>Una tienda que también es juego</h3><p>La idea combina compra y exploración: podés mirar la colección, marcar favoritos, probar combinaciones y sumar productos al carrito. Todo funciona en esta página, sin inicio de sesión.</p></div><div class="game-panel"><span class="eyebrow">Tu experiencia</span><h3 id="statsTitle">0 favoritos · 0 productos</h3><p>El carrito y los favoritos duran durante esta sesión; el récord se guarda en el navegador.</p><button class="add" onclick="resetDemo()">Reiniciar experiencia</button></div></section>
+<details class="credits"><summary>Créditos de imágenes y licencias</summary><p>Fotografías ilustrativas, no corresponden a productos reales en venta. Si no hay conexión, se muestran dibujos locales.</p><ul><li><a href="https://commons.wikimedia.org/wiki/File:Smiling_woman_pink_shirt.jpg" target="_blank" rel="noopener">Smiling woman pink shirt.jpg</a> · Joshua McKnight (Pexels) · <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0 1.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Camiseta-negra.jpg" target="_blank" rel="noopener">Camiseta-negra.jpg</a> · Camisetas · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Denimjeans2.JPG" target="_blank" rel="noopener">Denimjeans2.JPG</a> · Manda.L.Isch; Petru Dimitriu · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Silver_painted_skirt.jpg" target="_blank" rel="noopener">Silver painted skirt.jpg</a> · Andrea Cornell · <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:White_sneakers.jpg" target="_blank" rel="noopener">White sneakers.jpg</a> · Melania Sokolova (Toronto) · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Black_high-heeled_boots_in_synthetic_leather_2.jpg" target="_blank" rel="noopener">Black high-heeled boots in synthetic leather 2.jpg</a> · W.carter · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Chamois_leather_jacket_%28cropped%29.jpg" target="_blank" rel="noopener">Chamois leather jacket (cropped).jpg</a> · Nikolay Komarov · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li><a href="https://commons.wikimedia.org/wiki/File:Khaki_Cargo_Pants_Front.jpg" target="_blank" rel="noopener">Khaki Cargo Pants Front.jpg</a> · Cici water · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a></li></ul></details></main>
+
+<div class="drawer" id="drawer" onclick="closeCartFromBg(event)"><aside class="drawer-card"><div class="drawer-head"><h2 style="margin:0">Tu carrito</h2><button class="icon-btn" onclick="toggleCart()">✕</button></div><div class="drawer-items" id="cartItems"></div><div class="total"><div style="display:flex;justify-content:space-between"><span>Total</span><strong id="cartTotal">$0</strong></div><button class="checkout" onclick="fakeCheckout()">Simular compra</button></div></aside></div>
+<div class="toast" id="toast">Agregado al carrito</div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
